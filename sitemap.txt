@@ -1,2 +1,9 @@
+https://pinohans.github.io/tags/index.html
+https://pinohans.github.io/repository/index.html
+https://pinohans.github.io/links/index.html
+https://pinohans.github.io/categories/index.html
+https://pinohans.github.io/books/index.html
+https://pinohans.github.io/404.html
+https://pinohans.github.io/about/index.html
 https://pinohans.github.io/2023/03/29/hello-world/
 https://pinohans.github.io/
