@@ -1,3 +1,4 @@
+https://pinohans.github.io/2023/03/29/oauth2%E6%94%BB%E5%87%BB%E9%9D%A2%E5%88%86%E6%9E%90/
 https://pinohans.github.io/tags/index.html
 https://pinohans.github.io/repository/index.html
 https://pinohans.github.io/links/index.html
@@ -7,3 +8,7 @@ https://pinohans.github.io/404.html
 https://pinohans.github.io/about/index.html
 https://pinohans.github.io/2023/03/29/hello-world/
 https://pinohans.github.io/
+https://pinohans.github.io/tags/oauth2/
+https://pinohans.github.io/tags/pentest/
+https://pinohans.github.io/tags/bugbounty/
+https://pinohans.github.io/categories/security/
