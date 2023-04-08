@@ -35,6 +35,56 @@
     
     
     <entry>
+      <title>Golang机制之Context</title>
+      <link href="/2023/03/02/Golang%E6%9C%BA%E5%88%B6%E4%B9%8BContext/"/>
+      <url>/2023/03/02/Golang%E6%9C%BA%E5%88%B6%E4%B9%8BContext/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h2><p>Go 1.7 标准库引入 context，中文译作“上下文”，准确说它是 goroutine 的上下文，包含 goroutine 的运行状态、环境、现场等信息。</p><p>context 主要用来在 goroutine 之间传递上下文信息，包括：取消信号、超时时间、截止时间、key-value等。</p><p>随着 context 包的引入，标准库中很多接口因此加上了 context 参数，例如 database&#x2F;sql 包。context 几乎成为了并发控制和超时控制的标准做法。</p><h2 id="Context-使用原则"><a href="#Context-使用原则" class="headerlink" title="Context 使用原则"></a>Context 使用原则</h2><p>在golang文档里面，对于 Context 的使用有一些原则：</p><blockquote><p>Do not store Contexts inside a struct type; instead, pass a Context explicitly to each function that needs it. The Context should be the first parameter, typically named ctx.</p><p>Do not pass a nil Context, even if a function permits it. Pass context.TODO if you are unsure about which Context to use.</p><p>Use context Values only for request-scoped data that transits processes and APIs, not for passing optional parameters to functions.</p><p>The same Context may be passed to functions running in different goroutines; Contexts are safe for simultaneous use by multiple goroutines.</p></blockquote><ul><li>不要把 <code>Context</code> 放在结构体中，要以参数的方式传递。<code>Context</code> 应该作为第一个参数，一般命名为 <code>ctx</code>。</li><li>不要传递一个 <code>nil</code> 的 <code>Context</code>，即使函数允许 <code>nil</code> 也不要这么做。如果不确定使用哪个 <code>Context</code>，使用 <code>context.TODO</code>。</li><li>使用 <code>Context</code> 的 <code>Value</code> 在进程和 API 之间传递请求作用域数据，不要用于传递可选参数给函数。</li><li>相同的 <code>Context</code> 可以传递给不同的 goroutine，<code>Context</code> 是安全的，可以被多个 goroutine 同时使用。</li></ul><h2 id="Golang系列文章"><a href="#Golang系列文章" class="headerlink" title="Golang系列文章"></a>Golang系列文章</h2><p>其他相关内容请参考<a href="/2023/03/01/Golang%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/" title="Golang深入浅出">[Golang深入浅出]</a></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://pkg.go.dev/context">context package - context - Go Packages</a></li><li><a href="https://murphypei.github.io/blog/2021/06/go-context">Golang 中 context 的使用方式</a></li><li><a href="https://zhuanlan.zhihu.com/p/68792989">深度解密Go语言之context</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> development </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> golang </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Golang深入浅出</title>
+      <link href="/2023/03/01/Golang%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/"/>
+      <url>/2023/03/01/Golang%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="GO机制"><a href="#GO机制" class="headerlink" title="GO机制"></a>GO机制</h2><h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p><code>context</code> 包定义了 <code>Context</code> 类型，它可以携带超时时间、取消信号、和其他请求作用域的key-value对，用于 <code>API</code> 和进程之间传递。</p><p>通常用于控制 <code>goroutine</code> 的生命周期，比如控制 <code>goroutine</code> 的取消、超时、截止时间等。</p><ul><li><a href="/2023/03/02/Golang%E6%9C%BA%E5%88%B6%E4%B9%8BContext/" title="Golang机制之Context">[Golang机制之Context]</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> development </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> golang </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>安全名词释义</title>
       <link href="/2023/02/01/%E5%AE%89%E5%85%A8%E5%90%8D%E8%AF%8D%E9%87%8A%E4%B9%89/"/>
       <url>/2023/02/01/%E5%AE%89%E5%85%A8%E5%90%8D%E8%AF%8D%E9%87%8A%E4%B9%89/</url>
